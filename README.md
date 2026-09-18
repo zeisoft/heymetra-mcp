@@ -8,7 +8,7 @@
 
 A remote MCP server for the accounts your business already runs on — ads, analytics, store, CRM, mobile subscriptions. Connect them once, then ask about all of them together from Claude, ChatGPT, Cursor or whichever assistant you already pay for.
 
-[![MCP Registry](https://img.shields.io/badge/MCP_Registry-com.heymetra%2Fheymetra-1f6feb)](https://registry.modelcontextprotocol.io/v0/servers?search=heymetra)
+[![MCP Registry](https://img.shields.io/badge/MCP_Registry-com.heymetra%2Fheymetra-1f6feb)](https://registry.modelcontextprotocol.io/v0/servers/com.heymetra%2Fheymetra/versions)
 [![Transport](https://img.shields.io/badge/transport-Streamable_HTTP-444)](https://modelcontextprotocol.io/specification/draft/basic/transports)
 [![Auth](https://img.shields.io/badge/auth-OAuth_2.1-444)](https://heymetra.com/security/)
 [![Website](https://img.shields.io/badge/heymetra.com-1f6feb)](https://heymetra.com/)
@@ -204,7 +204,7 @@ Missing one you need? Ask inside the assistant — `submit_feedback` sends the r
 - **Per-workspace surface** — tools are resolved per request from the accounts that workspace has connected. A revoked token stops working on the next call, not whenever the transport session happens to end.
 - **Change notifications** — connect an account mid-conversation and the tool list updates in place.
 
-Published in the [Official MCP Registry](https://registry.modelcontextprotocol.io/v0/servers?search=heymetra) as `com.heymetra/heymetra`.
+Published in the [Official MCP Registry](https://registry.modelcontextprotocol.io/v0/servers/com.heymetra%2Fheymetra/versions) as `com.heymetra/heymetra`.
 
 ## Links
 
