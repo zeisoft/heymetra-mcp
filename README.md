@@ -183,18 +183,19 @@ What HeyMetra does not claim: no SOC 2, no ISO certification, no penetration tes
 
 Every connector in the catalogue, by category. **Which of these you can connect today is on each connector's own page** — that list moves, and a README is the wrong place to freeze it.
 
+The ones you can connect today also have a repository of their own, marked <sup>repo</sup> below: setup steps, what you can ask it, what it may and may not touch, and what to do when the provider refuses. Each one is generated from the same catalogue and refreshed daily.
+
 **Ads** — [Google Ads](https://heymetra.com/connectors/google-ads/) · [Meta](https://heymetra.com/connectors/meta-ads/)
 
-**Analytics** — [Google Analytics 4](https://heymetra.com/connectors/google-analytics-4/) · [Google Search Console](https://heymetra.com/connectors/google-search-console/)
+**Analytics** — [Google Analytics 4](https://heymetra.com/connectors/google-analytics-4/) · [Google Search Console](https://heymetra.com/connectors/google-search-console/) <sup>[repo](https://github.com/zeisoft/google-search-console-mcp)</sup>
 
-**Ecommerce** — [Shopify](https://heymetra.com/connectors/shopify/) · [Trendyol](https://heymetra.com/connectors/trendyol/) · [WooCommerce](https://heymetra.com/connectors/woocommerce/)
+**Ecommerce** — [Shopify](https://heymetra.com/connectors/shopify/) · [Trendyol](https://heymetra.com/connectors/trendyol/) <sup>[repo](https://github.com/zeisoft/trendyol-mcp)</sup> · [WooCommerce](https://heymetra.com/connectors/woocommerce/) <sup>[repo](https://github.com/zeisoft/woocommerce-mcp)</sup>
 
-**Revenue & CRM** — [Stripe](https://heymetra.com/connectors/stripe/) · [HubSpot](https://heymetra.com/connectors/hubspot/) · [Zoho CRM](https://heymetra.com/connectors/zoho-crm/) · [Zoho SalesIQ](https://heymetra.com/connectors/zoho-salesiq/) · [Zoho Marketing Automation](https://heymetra.com/connectors/zoho-marketing-automation/)
+**Revenue & CRM** — [Stripe](https://heymetra.com/connectors/stripe/) · [HubSpot](https://heymetra.com/connectors/hubspot/) · [Zoho CRM](https://heymetra.com/connectors/zoho-crm/) <sup>[repo](https://github.com/zeisoft/zoho-crm-mcp)</sup> · [Zoho SalesIQ](https://heymetra.com/connectors/zoho-salesiq/) <sup>[repo](https://github.com/zeisoft/zoho-salesiq-mcp)</sup> · [Zoho Marketing Automation](https://heymetra.com/connectors/zoho-marketing-automation/) <sup>[repo](https://github.com/zeisoft/zoho-marketing-automation-mcp)</sup>
 
-**Mobile** — [AppsFlyer](https://heymetra.com/connectors/appsflyer/) · [RevenueCat](https://heymetra.com/connectors/revenuecat/) · [Adapty](https://heymetra.com/connectors/adapty/) · [App Store Connect](https://heymetra.com/connectors/app-store-connect/)
+**Mobile** — [AppsFlyer](https://heymetra.com/connectors/appsflyer/) <sup>[repo](https://github.com/zeisoft/appsflyer-mcp)</sup> · [RevenueCat](https://heymetra.com/connectors/revenuecat/) · [Adapty](https://heymetra.com/connectors/adapty/) <sup>[repo](https://github.com/zeisoft/adapty-mcp)</sup> · [App Store Connect](https://heymetra.com/connectors/app-store-connect/) <sup>[repo](https://github.com/zeisoft/app-store-connect-mcp)</sup>
 
-**Channels** (delivery, not data) — [Slack](https://heymetra.com/connectors/slack/) · [Telegram](https://heymetra.com/connectors/telegram/) · [Email](https://heymetra.com/connectors/email/)
-
+**Channels** (delivery, not data) — [Slack](https://heymetra.com/connectors/slack/) <sup>[repo](https://github.com/zeisoft/slack-mcp)</sup> · [Telegram](https://heymetra.com/connectors/telegram/) <sup>[repo](https://github.com/zeisoft/telegram-mcp)</sup> · [Email](https://heymetra.com/connectors/email/)
 Missing one you need? Ask inside the assistant — `submit_feedback` sends the request to us in your own words — or [write to us](https://heymetra.com/contact/).
 
 ## How it works
