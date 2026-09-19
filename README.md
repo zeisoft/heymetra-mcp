@@ -196,7 +196,8 @@ The ones you can connect today also have a repository of their own, marked <sup>
 **Mobile** — [AppsFlyer](https://heymetra.com/connectors/appsflyer/) <sup>[repo](https://github.com/zeisoft/appsflyer-mcp)</sup> · [RevenueCat](https://heymetra.com/connectors/revenuecat/) · [Adapty](https://heymetra.com/connectors/adapty/) <sup>[repo](https://github.com/zeisoft/adapty-mcp)</sup> · [App Store Connect](https://heymetra.com/connectors/app-store-connect/) <sup>[repo](https://github.com/zeisoft/app-store-connect-mcp)</sup>
 
 **Channels** (delivery, not data) — [Slack](https://heymetra.com/connectors/slack/) <sup>[repo](https://github.com/zeisoft/slack-mcp)</sup> · [Telegram](https://heymetra.com/connectors/telegram/) <sup>[repo](https://github.com/zeisoft/telegram-mcp)</sup> · [Email](https://heymetra.com/connectors/email/)
-Missing one you need? Ask inside the assistant — `submit_feedback` sends the request to us in your own words — or [write to us](https://heymetra.com/contact/).
+
+Missing one you need? Ask for it inside the assistant — HeyMetra can pass a request or a correction to us in your own words — or [write to us](https://heymetra.com/contact/).
 
 ## How it works
 
