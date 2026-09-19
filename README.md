@@ -53,6 +53,16 @@ https://mcp.heymetra.com/mcp
 
 Your assistant will send you through a sign-in once, and HeyMetra never sees a password for any connected account — authorisation happens at the provider.
 
+### One command
+
+```bash
+npx add-mcp https://mcp.heymetra.com/mcp
+```
+
+[`add-mcp`](https://www.npmjs.com/package/add-mcp) is a third-party installer that writes the configuration for Claude Code, Codex, Cursor, Antigravity, VS Code and seventeen other agents — it infers the name from the address, so the server lands as `heymetra`. For the assistants that keep the setting in their own UI rather than a file, use the steps below.
+
+### Or by hand
+
 <details>
 <summary><b>Claude</b> — Settings → Customize → Connectors → Add custom connector</summary>
 
