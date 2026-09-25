@@ -30,9 +30,9 @@ HeyMetra is one server over all of them. Spend, traffic, store and revenue answe
 Two consequences worth knowing before you read further:
 
 - **The model is yours.** HeyMetra has no chat interface and buys no inference. Your assistant calls our tools using the subscription you already have, which is why a seat costs what it costs.
-- **The tool list is yours too.** A workspace sees tools for the accounts it has connected and nothing else. There is no fixed catalogue of 57 tools sitting in your assistant's context — only the ones that can actually answer.
+- **The tool list is yours too.** A workspace sees tools for the accounts it has connected and nothing else. There is no fixed catalogue of 54 tools sitting in your assistant's context — only the ones that can actually answer.
 
-Of those tools, **45 read and 12 write**. Every one of the 12 stops and asks a person first. See [Writes stop for a person](#writes-stop-for-a-person).
+Of those tools, **31 read and 23 write**. Every one of the 23 stops and asks a person first. See [Writes stop for a person](#writes-stop-for-a-person).
 
 ## Who it's for
 
