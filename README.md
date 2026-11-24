@@ -41,7 +41,7 @@ Of those tools, **31 read and 23 write**. Every one of the 23 stops and asks a p
 - **Agencies** where every client wants their own report, yesterday.
 - **Mobile app owners** — ad spend lives in one place and subscription revenue in another. This is the gap HeyMetra was built around: AppsFlyer, Adapty, RevenueCat and App Store Connect sit beside Google Ads and Meta, on one connection.
 
-Not for you if you want a chat product or a dashboard. HeyMetra is neither, and it is paid — no free plan, no trial. The current plans are on the [pricing page](https://heymetra.com/pricing/).
+Not for you if you want a chat product or a dashboard. HeyMetra is neither. It is a paid product with no free plan, and every plan starts with a 7-day free trial; the card is taken at sign-up and the first charge comes on day 8. The current plans are on the [pricing page](https://heymetra.com/pricing/).
 
 ## Connect it
 
