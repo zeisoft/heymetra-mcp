@@ -23,23 +23,23 @@ https://mcp.heymetra.com/mcp
 
 ## What this is
 
-Most MCP servers cover one vendor. Connect the Google Ads one and it will tell you what you spent; it cannot tell you what you earned, because the money arrived in Stripe, or Shopify, or Adapty, and that is a different server with a different login.
+Most MCP servers cover one vendor. Connect the Google Ads one and it will tell you what you spent; it cannot tell you what you earned, because the money arrived in Stripe, or WooCommerce, or Adapty, and that is a different server with a different login.
 
 HeyMetra is one server over all of them. Spend, traffic, store and revenue answer the same question at the same time, which is the only way a question like *"did that campaign pay for itself?"* has an answer at all.
 
 Two consequences worth knowing before you read further:
 
 - **The model is yours.** HeyMetra has no chat interface and buys no inference. Your assistant calls our tools using the subscription you already have, which is why a seat costs what it costs.
-- **The tool list is yours too.** A workspace sees tools for the accounts it has connected and nothing else. There is no fixed catalogue of 54 tools sitting in your assistant's context — only the ones that can actually answer.
+- **The tool list is yours too.** A workspace sees tools for the accounts it has connected and nothing else. There is no fixed catalogue of 62 tools sitting in your assistant's context — only the ones that can actually answer.
 
-Of those tools, **31 read and 23 write**. Every one of the 23 stops and asks a person first. See [Writes stop for a person](#writes-stop-for-a-person).
+Of those tools, **35 read and 27 write**. Every one of the 27 stops and asks a person first. See [Writes stop for a person](#writes-stop-for-a-person).
 
 ## Who it's for
 
 - **Founders and small teams** with no analyst. "How did we do last week?" should not require a dashboard tour.
 - **Marketing and growth** with budget split across platforms. "Where are we burning money?" is a cross-account question by definition.
 - **Agencies** where every client wants their own report, yesterday.
-- **Mobile app owners** — ad spend lives in one place and subscription revenue in another. This is the gap HeyMetra was built around: AppsFlyer, Adapty, RevenueCat and App Store Connect sit beside Google Ads and Meta, on one connection.
+- **Mobile app owners** — ad spend lives in one place and subscription revenue in another. This is the gap HeyMetra was built around: AppsFlyer, Adapty, RevenueCat and App Store Connect sit beside Google Ads, on one connection.
 
 Not for you if you want a chat product or a dashboard. HeyMetra is neither. It is a paid product with no free plan, and every plan starts with a 7-day free trial; the card is taken at sign-up and the first charge comes on day 8. The current plans are on the [pricing page](https://heymetra.com/pricing/).
 
@@ -66,15 +66,15 @@ npx add-mcp https://mcp.heymetra.com/mcp
 <details>
 <summary><b>Claude</b> — Settings → Customize → Connectors → Add custom connector</summary>
 
-Anthropic calls a connected MCP server a *connector*. Add it from Claude's own settings; on Team and Enterprise plans only an owner can add it, under Organization settings.
+Anthropic calls a connected MCP server a *connector*. Add it from Claude's own settings. On Team and Enterprise plans, an owner adds the connector for the whole organization under Organization settings → Connectors, and each member then connects to it.
 
 Full walkthrough: [heymetra.com/mcp/claude/](https://heymetra.com/mcp/claude/)
 </details>
 
 <details>
-<summary><b>ChatGPT</b> — Settings → Security and login → Developer mode, then chatgpt.com/plugins</summary>
+<summary><b>ChatGPT</b> — chatgpt.com/plugins → + → Add custom MCP server</summary>
 
-The endpoint has to include its `/mcp` path here. OpenAI has moved this setting more than once, so if the menu disagrees with this line, trust the menu and tell us.
+Add it on chatgpt.com in a browser, because the mobile app cannot add one. Every ChatGPT plan can, Free included. In a Business, Enterprise or Edu workspace, an admin or owner decides whether members can add custom MCP servers. ChatGPT needs the full address, including `/mcp` at the end.
 
 Full walkthrough: [heymetra.com/mcp/chatgpt/](https://heymetra.com/mcp/chatgpt/)
 </details>
@@ -82,15 +82,15 @@ Full walkthrough: [heymetra.com/mcp/chatgpt/](https://heymetra.com/mcp/chatgpt/)
 <details>
 <summary><b>Grok</b> — grok.com/connectors → New Connector → Custom</summary>
 
-xAI calls this "bring your own MCP". It asks for the MCP server URL and nothing else.
+On Grok Business and Enterprise, a team admin has to provision the connector in xAI's cloud console before members can use it.
 
 Full walkthrough: [heymetra.com/mcp/grok/](https://heymetra.com/mcp/grok/)
 </details>
 
 <details>
-<summary><b>Perplexity</b> — Settings → Connectors → Custom connector → Remote</summary>
+<summary><b>Perplexity</b> — Plugins → Add custom → Connector → Add MCP connector → Remote</summary>
 
-Perplexity documents remote connectors as a Pro, Max and Enterprise feature.
+Available on Pro, Max and Enterprise. In an organization, members can add a custom connector only after an admin turns on *Allow members to add custom connectors*, which is off by default.
 
 Full walkthrough: [heymetra.com/mcp/perplexity/](https://heymetra.com/mcp/perplexity/)
 </details>
@@ -115,7 +115,7 @@ Full walkthrough: [heymetra.com/mcp/claude-code/](https://heymetra.com/mcp/claud
 url = "https://mcp.heymetra.com/mcp"
 ```
 
-Then `codex mcp login`.
+Then `codex mcp login heymetra`.
 
 Full walkthrough: [heymetra.com/mcp/codex/](https://heymetra.com/mcp/codex/)
 </details>
@@ -147,7 +147,7 @@ Full walkthrough: [heymetra.com/mcp/cursor/](https://heymetra.com/mcp/cursor/)
 }
 ```
 
-The key is `serverUrl`, not `url` — the one thing Antigravity spells differently from every other JSON client.
+Antigravity's documented key for the address is `serverUrl`, though it also accepts `url`.
 
 Full walkthrough: [heymetra.com/mcp/antigravity/](https://heymetra.com/mcp/antigravity/)
 </details>
@@ -166,7 +166,7 @@ Questions that need two accounts at once are the point:
 
 > Which leads in the CRM came from the campaign that started on Monday?
 
-> Cut the budget on the ad set with the worst cost per purchase by 20%.
+> Cut the budget on the campaign with the worst cost per purchase by 20%.
 
 The last one does not run. It comes back as a change for you to approve.
 
@@ -191,19 +191,21 @@ What HeyMetra does not claim: no SOC 2, no ISO certification, no penetration tes
 
 ## Connectors
 
-Every connector in the catalogue, by category. **Which of these you can connect today is on each connector's own page** — that list moves, and a README is the wrong place to freeze it.
+Every connector in the catalogue, by category. The ones marked *coming soon* cannot be connected yet; each connector's own page carries its current state.
 
-The ones you can connect today also have a repository of their own, marked <sup>repo</sup> below: setup steps, what you can ask it, what it may and may not touch, and what to do when the provider refuses. Each one is generated from the same catalogue and refreshed daily.
+Every connector you can connect today, apart from Email, also has a repository of its own, marked <sup>repo</sup> below: setup steps, what you can ask it, what it may and may not touch, and what to do when the provider refuses. Each one is generated from the same catalogue and refreshed daily.
 
-**Ads** — [Google Ads](https://heymetra.com/connectors/google-ads/) · [Meta](https://heymetra.com/connectors/meta-ads/)
+**Ads** — [Google Ads](https://heymetra.com/connectors/google-ads/) <sup>[repo](https://github.com/zeisoft/google-ads-mcp)</sup> · [Meta](https://heymetra.com/connectors/meta-ads/) (coming soon)
 
-**Analytics** — [Google Analytics 4](https://heymetra.com/connectors/google-analytics-4/) · [Google Search Console](https://heymetra.com/connectors/google-search-console/) <sup>[repo](https://github.com/zeisoft/google-search-console-mcp)</sup>
+**Analytics** — [Google Analytics 4](https://heymetra.com/connectors/google-analytics-4/) <sup>[repo](https://github.com/zeisoft/google-analytics-4-mcp)</sup> · [Google Search Console](https://heymetra.com/connectors/google-search-console/) <sup>[repo](https://github.com/zeisoft/google-search-console-mcp)</sup> · [PostHog](https://heymetra.com/connectors/posthog/) <sup>[repo](https://github.com/zeisoft/posthog-mcp)</sup>
 
-**Ecommerce** — [Shopify](https://heymetra.com/connectors/shopify/) · [Trendyol](https://heymetra.com/connectors/trendyol/) <sup>[repo](https://github.com/zeisoft/trendyol-mcp)</sup> · [WooCommerce](https://heymetra.com/connectors/woocommerce/) <sup>[repo](https://github.com/zeisoft/woocommerce-mcp)</sup>
+**Ecommerce** — [Shopify](https://heymetra.com/connectors/shopify/) (coming soon) · [Trendyol](https://heymetra.com/connectors/trendyol/) <sup>[repo](https://github.com/zeisoft/trendyol-mcp)</sup> · [Hepsiburada](https://heymetra.com/connectors/hepsiburada/) (coming soon) · [n11](https://heymetra.com/connectors/n11/) <sup>[repo](https://github.com/zeisoft/n11-mcp)</sup> · [Çiçeksepeti](https://heymetra.com/connectors/ciceksepeti/) <sup>[repo](https://github.com/zeisoft/ciceksepeti-mcp)</sup> · [Amazon Seller Central](https://heymetra.com/connectors/amazon-seller-central/) <sup>[repo](https://github.com/zeisoft/amazon-seller-central-mcp)</sup> · [ikas](https://heymetra.com/connectors/ikas/) <sup>[repo](https://github.com/zeisoft/ikas-mcp)</sup> · [WooCommerce](https://heymetra.com/connectors/woocommerce/) <sup>[repo](https://github.com/zeisoft/woocommerce-mcp)</sup>
 
-**Revenue & CRM** — [Stripe](https://heymetra.com/connectors/stripe/) · [HubSpot](https://heymetra.com/connectors/hubspot/) · [Zoho CRM](https://heymetra.com/connectors/zoho-crm/) <sup>[repo](https://github.com/zeisoft/zoho-crm-mcp)</sup> · [Zoho SalesIQ](https://heymetra.com/connectors/zoho-salesiq/) <sup>[repo](https://github.com/zeisoft/zoho-salesiq-mcp)</sup> · [Zoho Marketing Automation](https://heymetra.com/connectors/zoho-marketing-automation/) <sup>[repo](https://github.com/zeisoft/zoho-marketing-automation-mcp)</sup>
+**Revenue & CRM** — [Stripe](https://heymetra.com/connectors/stripe/) <sup>[repo](https://github.com/zeisoft/stripe-mcp)</sup> · [HubSpot](https://heymetra.com/connectors/hubspot/) (coming soon) · [Zoho CRM](https://heymetra.com/connectors/zoho-crm/) <sup>[repo](https://github.com/zeisoft/zoho-crm-mcp)</sup> · [Zoho SalesIQ](https://heymetra.com/connectors/zoho-salesiq/) <sup>[repo](https://github.com/zeisoft/zoho-salesiq-mcp)</sup> · [Zoho Marketing Automation](https://heymetra.com/connectors/zoho-marketing-automation/) <sup>[repo](https://github.com/zeisoft/zoho-marketing-automation-mcp)</sup>
 
-**Mobile** — [AppsFlyer](https://heymetra.com/connectors/appsflyer/) <sup>[repo](https://github.com/zeisoft/appsflyer-mcp)</sup> · [RevenueCat](https://heymetra.com/connectors/revenuecat/) · [Adapty](https://heymetra.com/connectors/adapty/) <sup>[repo](https://github.com/zeisoft/adapty-mcp)</sup> · [App Store Connect](https://heymetra.com/connectors/app-store-connect/) <sup>[repo](https://github.com/zeisoft/app-store-connect-mcp)</sup>
+**Mobile** — [AppsFlyer](https://heymetra.com/connectors/appsflyer/) <sup>[repo](https://github.com/zeisoft/appsflyer-mcp)</sup> · [RevenueCat](https://heymetra.com/connectors/revenuecat/) <sup>[repo](https://github.com/zeisoft/revenuecat-mcp)</sup> · [Adapty](https://heymetra.com/connectors/adapty/) <sup>[repo](https://github.com/zeisoft/adapty-mcp)</sup> · [App Store Connect](https://heymetra.com/connectors/app-store-connect/) <sup>[repo](https://github.com/zeisoft/app-store-connect-mcp)</sup>
+
+**Work** — [Jira](https://heymetra.com/connectors/jira/) <sup>[repo](https://github.com/zeisoft/jira-mcp)</sup>
 
 **Channels** (delivery, not data) — [Slack](https://heymetra.com/connectors/slack/) <sup>[repo](https://github.com/zeisoft/slack-mcp)</sup> · [Telegram](https://heymetra.com/connectors/telegram/) <sup>[repo](https://github.com/zeisoft/telegram-mcp)</sup> · [Email](https://heymetra.com/connectors/email/)
 
@@ -227,8 +229,7 @@ Published in the [Official MCP Registry](https://registry.modelcontextprotocol.i
 | Connectors | [heymetra.com/connectors/](https://heymetra.com/connectors/) |
 | Setup per assistant | [heymetra.com/mcp/](https://heymetra.com/mcp/) |
 | Security and limits | [heymetra.com/security/](https://heymetra.com/security/) |
-| Comparisons | [heymetra.com/compare/](https://heymetra.com/compare/) |
-| MCP server directory | [heymetra.com/mcp/directory/](https://heymetra.com/mcp/directory/) |
+| Alternatives | [heymetra.com/alternatives/](https://heymetra.com/alternatives/) |
 | Writing | [heymetra.com/blog/](https://heymetra.com/blog/) |
 | About | [heymetra.com/about/](https://heymetra.com/about/) |
 | Contact | [hello@heymetra.com](mailto:hello@heymetra.com) |
